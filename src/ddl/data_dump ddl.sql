@@ -1,0 +1,6 @@
+DROP SCHEMA IF EXISTS datadump;
+
+CREATE SCHEMA IF NOT EXISTS datadump;
+
+USE datadump;
+
