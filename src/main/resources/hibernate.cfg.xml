@@ -11,5 +11,6 @@
         <property name="connection.driver_class">com.mysql.cj.jdbc.Driver</property>
         <mapping class="com.example.demo.domain.Trip" />
         <mapping class="com.example.demo.domain.Transaction" />
+        <mapping class="com.example.demo.domain.User" />
     </session-factory>
 </hibernate-configuration>

@@ -16,7 +16,7 @@ CREATE TABLE IF NOT EXISTS trip
 	event_type varchar(255),
 	event_modality varchar(255),
 	event_purpose varchar(255),
-	event_off_peak bit,
+	event_off_peak varchar(255),
 	measure_distance_metres bigint,
 	measure_average_kmh decimal,
 	measure_co2_grams bigint,
@@ -25,7 +25,7 @@ CREATE TABLE IF NOT EXISTS trip
 	event_end_datetime_local datetime,
 	event_end_datetime_utc datetime,
 	event_start_datetime_local datetime,
-	event_start_datetime_uts datetime,
+	event_start_datetime_utc datetime,
 	masked_user_id varchar(255),
 	FOREIGN KEY (masked_user_id) REFERENCES user(id)
 );
