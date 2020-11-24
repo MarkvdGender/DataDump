@@ -5,8 +5,8 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 
 import javax.persistence.*;
 
-@Getter
-@Setter
+//@Getter
+//@Setter
 
 @Entity
 @Table(name = "transaction")
@@ -89,7 +89,207 @@ public class Transaction {
     @JsonProperty("MaskedUserId")
     private String maskedUserId;
 
-////    RELATIONAL MAPPING
+    public long getAggDatePersonModalityId() {
+        return aggDatePersonModalityId;
+    }
+
+    public void setAggDatePersonModalityId(long aggDatePersonModalityId) {
+        this.aggDatePersonModalityId = aggDatePersonModalityId;
+    }
+
+    public String getEventType() {
+        return eventType;
+    }
+
+    public void setEventType(String eventType) {
+        this.eventType = eventType;
+    }
+
+    public String getAggStartDate() {
+        return aggStartDate;
+    }
+
+    public void setAggStartDate(String aggStartDate) {
+        this.aggStartDate = aggStartDate;
+    }
+
+    public String getAggModality() {
+        return aggModality;
+    }
+
+    public void setAggModality(String aggModality) {
+        this.aggModality = aggModality;
+    }
+
+    public double getAggDistanceMetres() {
+        return aggDistanceMetres;
+    }
+
+    public void setAggDistanceMetres(double aggDistanceMetres) {
+        this.aggDistanceMetres = aggDistanceMetres;
+    }
+
+    public double getAggDistanceMetresOffPeak() {
+        return aggDistanceMetresOffPeak;
+    }
+
+    public void setAggDistanceMetresOffPeak(double aggDistanceMetresOffPeak) {
+        this.aggDistanceMetresOffPeak = aggDistanceMetresOffPeak;
+    }
+
+    public double getAggTravelDurationMinutes() {
+        return aggTravelDurationMinutes;
+    }
+
+    public void setAggTravelDurationMinutes(double aggTravelDurationMinutes) {
+        this.aggTravelDurationMinutes = aggTravelDurationMinutes;
+    }
+
+    public double getAggAverageKmh() {
+        return aggAverageKmh;
+    }
+
+    public void setAggAverageKmh(double aggAverageKmh) {
+        this.aggAverageKmh = aggAverageKmh;
+    }
+
+    public double getAggCo2Grams() {
+        return aggCo2Grams;
+    }
+
+    public void setAggCo2Grams(double aggCo2Grams) {
+        this.aggCo2Grams = aggCo2Grams;
+    }
+
+    public double getAggCo2GramsKm() {
+        return aggCo2GramsKm;
+    }
+
+    public void setAggCo2GramsKm(double aggCo2GramsKm) {
+        this.aggCo2GramsKm = aggCo2GramsKm;
+    }
+
+    public double getAggMinutesExercise() {
+        return aggMinutesExercise;
+    }
+
+    public void setAggMinutesExercise(double aggMinutesExercise) {
+        this.aggMinutesExercise = aggMinutesExercise;
+    }
+
+    public double getAggCarDamageScore() {
+        return aggCarDamageScore;
+    }
+
+    public void setAggCarDamageScore(double aggCarDamageScore) {
+        this.aggCarDamageScore = aggCarDamageScore;
+    }
+
+    public double getAggCorrectMileageScore() {
+        return aggCorrectMileageScore;
+    }
+
+    public void setAggCorrectMileageScore(double aggCorrectMileageScore) {
+        this.aggCorrectMileageScore = aggCorrectMileageScore;
+    }
+
+    public double getAggDrivingBehaviourScore() {
+        return aggDrivingBehaviourScore;
+    }
+
+    public void setAggDrivingBehaviourScore(double aggDrivingBehaviourScore) {
+        this.aggDrivingBehaviourScore = aggDrivingBehaviourScore;
+    }
+
+    public double getAggFuelConsumptionScore() {
+        return aggFuelConsumptionScore;
+    }
+
+    public void setAggFuelConsumptionScore(double aggFuelConsumptionScore) {
+        this.aggFuelConsumptionScore = aggFuelConsumptionScore;
+    }
+
+    public double getAggFuelLiters() {
+        return aggFuelLiters;
+    }
+
+    public void setAggFuelLiters(double aggFuelLiters) {
+        this.aggFuelLiters = aggFuelLiters;
+    }
+
+    public double getAggFuelLiters100km() {
+        return aggFuelLiters100km;
+    }
+
+    public void setAggFuelLiters100km(double aggFuelLiters100km) {
+        this.aggFuelLiters100km = aggFuelLiters100km;
+    }
+
+    public double getAggTrafficFineScore() {
+        return aggTrafficFineScore;
+    }
+
+    public void setAggTrafficFineScore(double aggTrafficFineScore) {
+        this.aggTrafficFineScore = aggTrafficFineScore;
+    }
+
+    public double getAggCarDamagesNumber() {
+        return aggCarDamagesNumber;
+    }
+
+    public void setAggCarDamagesNumber(double aggCarDamagesNumber) {
+        this.aggCarDamagesNumber = aggCarDamagesNumber;
+    }
+
+    public double getAggStandardFuelLiters100km() {
+        return aggStandardFuelLiters100km;
+    }
+
+    public void setAggStandardFuelLiters100km(double aggStandardFuelLiters100km) {
+        this.aggStandardFuelLiters100km = aggStandardFuelLiters100km;
+    }
+
+    public double getAggTrafficFinesNumber() {
+        return aggTrafficFinesNumber;
+    }
+
+    public void setAggTrafficFinesNumber(double aggTrafficFinesNumber) {
+        this.aggTrafficFinesNumber = aggTrafficFinesNumber;
+    }
+
+    public int getAggTravelObjectiveType() {
+        return aggTravelObjectiveType;
+    }
+
+    public void setAggTravelObjectiveType(int aggTravelObjectiveType) {
+        this.aggTravelObjectiveType = aggTravelObjectiveType;
+    }
+
+    public double getAggCustomizedConsumption() {
+        return aggCustomizedConsumption;
+    }
+
+    public void setAggCustomizedConsumption(double aggCustomizedConsumption) {
+        this.aggCustomizedConsumption = aggCustomizedConsumption;
+    }
+
+    public double getAggStandardKwhConsumption() {
+        return aggStandardKwhConsumption;
+    }
+
+    public void setAggStandardKwhConsumption(double aggStandardKwhConsumption) {
+        this.aggStandardKwhConsumption = aggStandardKwhConsumption;
+    }
+
+    public String getMaskedUserId() {
+        return maskedUserId;
+    }
+
+    public void setMaskedUserId(String maskedUserId) {
+        this.maskedUserId = maskedUserId;
+    }
+
+    ////    RELATIONAL MAPPING
 //    @ManyToOne
 //    @JoinColumn(name = "masked_user_id")
 //    private User user;
