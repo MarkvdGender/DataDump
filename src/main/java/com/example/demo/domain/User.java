@@ -7,8 +7,8 @@ import lombok.Setter;
 import javax.persistence.*;
 import java.util.List;
 
-@Getter
-@Setter
+//@Getter
+//@Setter
 
 @Entity
 @Table(name = "user")
@@ -24,7 +24,31 @@ public class User {
     @JsonProperty("transactions")
     private List<Transaction> transactions;
 
-////    RELATIONAL MAPPING
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
+    }
+
+    public List<Trip> getTrips() {
+        return trips;
+    }
+
+    public void setTrips(List<Trip> trips) {
+        this.trips = trips;
+    }
+
+    public List<Transaction> getTransactions() {
+        return transactions;
+    }
+
+    public void setTransactions(List<Transaction> transactions) {
+        this.transactions = transactions;
+    }
+
+    ////    RELATIONAL MAPPING
 //    @OneToMany(mappedBy = "user")
 //    @JsonProperty("transactions")
 //    private List<Transaction> transactions;
