@@ -13,9 +13,9 @@ import javax.persistence.*;
 public class Transaction {
 
     @Id
-    @Column(name = "aggregate_person_modality_id")
-    @JsonProperty("AggregatePersonModalityId")
-    private long aggregatePersonModalityId;
+    @Column(name = "agg_date_person_modality_id")
+    @JsonProperty("AggDatePersonModalityId")
+    private long aggDatePersonModalityId;
     @Column(name = "event_type")
     @JsonProperty("EventType")
     private String eventType;
@@ -85,10 +85,13 @@ public class Transaction {
     @Column(name = "agg_standard_kwh_consumption")
     @JsonProperty("AggStandardKwhConsumption")
     private double aggStandardKwhConsumption;
+    @Column(name = "masked_user_id")
+    @JsonProperty("MaskedUserId")
+    private String maskedUserId;
 
-//    RELATIONAL MAPPING
-    @ManyToOne
-    @JoinColumn(name = "masked_user_id")
-    private User user;
+////    RELATIONAL MAPPING
+//    @ManyToOne
+//    @JoinColumn(name = "masked_user_id")
+//    private User user;
 
 }

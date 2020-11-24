@@ -30,7 +30,7 @@ CREATE TABLE IF NOT EXISTS trip
 	FOREIGN KEY (masked_user_id) REFERENCES user(id)
 );
 
-CREATE TABLE IF NOT EXISTS transcation
+CREATE TABLE IF NOT EXISTS transaction
 (
 	agg_date_person_modality_id  bigint PRIMARY KEY,
 	event_type varchar(255),

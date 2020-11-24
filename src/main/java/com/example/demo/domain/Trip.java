@@ -55,10 +55,13 @@ public class Trip {
     private String eventStartDatetimeLocal;
     @Column(name = "event_start_datetime_utc")
     @JsonProperty("EventStartDateTimeUtc")
-    private String EventStartDatetimeUtc;
+    private String eventStartDatetimeUtc;
+    @Column(name = "masked_user_id")
+    @JsonProperty("MaskedUserId")
+    private String maskedUserId;
 
-//    RELATIONAL MAPPING
-    @ManyToOne
-    @JoinColumn(name = "masked_user_id")
-    private User user;
+////    RELATIONAL MAPPING
+//    @ManyToOne
+//    @JoinColumn(name = "masked_user_id")
+//    private User user;
 }
