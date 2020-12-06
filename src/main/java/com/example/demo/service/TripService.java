@@ -7,6 +7,8 @@ import com.example.demo.persistence.UserDao;
 import com.example.demo.persistence.mysql.TripMysqlDaoImpl;
 import com.example.demo.persistence.mysql.UserMysqlDaoImpl;
 
+import java.util.List;
+
 public class TripService {
 
     private static TripService instance;
@@ -30,6 +32,10 @@ public class TripService {
         u.setId(t.getMaskedUserId());
         userService.save(u);
         dao.save(t);
+    }
+
+    public List<Trip> findAll(){
+        return dao.findAll();
     }
 
 

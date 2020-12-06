@@ -35,7 +35,7 @@ public class Trip {
     @JsonProperty("MeasureDistanceMetres")
     private long measureDistanceMetres;
     @Column(name = "measure_average_kmh")
-    @JsonProperty("MeasureAverageKmh")
+    @JsonProperty("MeasureAverageKMH")
     private double measureAverageKmh;
     @Column(name = "measure_co2_grams")
     @JsonProperty("MeasureCo2Grams")
@@ -44,7 +44,7 @@ public class Trip {
     @JsonProperty("MeasureCo2GramsKm")
     private long measureCo2GramsKm;
     @Column(name = "measure_minute_exercise")
-    @JsonProperty("MeasureMinuteExercise")
+    @JsonProperty("MeasureMinutesExercise")
     private long measureMinuteExercise;
     @Column(name = "event_end_datetime_local")
     @JsonProperty("EventEndDateTimeLocal")
