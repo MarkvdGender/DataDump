@@ -37,15 +37,22 @@ public class TripMysqlDaoImpl implements TripDao {
         tr.commit();
         session.close();
 
-
     }
 
     @Override
     public List<Trip> findByUserId(String id) {
         session = sessionFactory.openSession();
-        Query query = session.createQuery("select a from Trip a WHERE masked_user_id = :id", Trip.class);
+        Query query = session.createQuery("select a from Trip a WHERE masked_user_id = :id and MONTH(event_end_datetime_local) = 7 and YEAR(event_end_datetime_local) = 2020 order by event_start_datetime_utc", Trip.class);
         query.setParameter("id", id);
         List<Trip> trips = query.getResultList();
+        session.close();
+        return trips;
+    }
+
+    @Override
+    public List<Trip> findAll() {
+        session = sessionFactory.openSession();
+        List<Trip> trips = session.createQuery("Select a from Trip a ", Trip.class).getResultList();
         session.close();
         return trips;
     }

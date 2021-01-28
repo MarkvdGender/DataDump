@@ -9,4 +9,6 @@ public interface TripDao {
     void save(Trip t);
 
     List<Trip> findByUserId(String id);
+
+    List<Trip> findAll();
 }

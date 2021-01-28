@@ -1,12 +1,8 @@
 package com.example.demo.domain;
 
-import lombok.*;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 import javax.persistence.*;
-
-//@Getter
-//@Setter
 
 @Entity
 @Table(name = "transaction")
@@ -288,10 +284,5 @@ public class Transaction {
     public void setMaskedUserId(String maskedUserId) {
         this.maskedUserId = maskedUserId;
     }
-
-    ////    RELATIONAL MAPPING
-//    @ManyToOne
-//    @JoinColumn(name = "masked_user_id")
-//    private User user;
 
 }

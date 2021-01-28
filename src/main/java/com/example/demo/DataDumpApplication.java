@@ -6,8 +6,8 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 @SpringBootApplication
 public class DataDumpApplication {
 
-	public static void main(String[] args) {
-		SpringApplication.run(DataDumpApplication.class, args);
-	}
+    public static void main(String[] args) {
+        SpringApplication.run(DataDumpApplication.class, args);
+    }
 
 }

@@ -6,7 +6,7 @@ import java.util.List;
 
 public interface TransactionDao {
 
-    void save (Transaction t);
+    void save(Transaction t);
 
     List<Transaction> findByUserId(String id);
 }
