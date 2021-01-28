@@ -1,14 +1,9 @@
 package com.example.demo.domain;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
-import lombok.Getter;
-import lombok.Setter;
 
 import javax.persistence.*;
 import java.util.List;
-
-//@Getter
-//@Setter
 
 @Entity
 @Table(name = "user")
@@ -47,13 +42,5 @@ public class User {
     public void setTransactions(List<Transaction> transactions) {
         this.transactions = transactions;
     }
-
-    ////    RELATIONAL MAPPING
-//    @OneToMany(mappedBy = "user")
-//    @JsonProperty("transactions")
-//    private List<Transaction> transactions;
-//    @OneToMany(mappedBy = "user")
-//    @JsonProperty("trips")
-//    private List<Trip> trips;
 
 }

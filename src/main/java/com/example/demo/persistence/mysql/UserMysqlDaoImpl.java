@@ -11,7 +11,7 @@ import org.hibernate.Transaction;
 
 import java.util.List;
 
-public class UserMysqlDaoImpl implements UserDao{
+public class UserMysqlDaoImpl implements UserDao {
 
     private static UserDao instance;
     private static SessionFactory sessionFactory;
@@ -19,15 +19,15 @@ public class UserMysqlDaoImpl implements UserDao{
     private static TripDao tripDao;
     private static TransactionDao transactionDao;
 
-    private UserMysqlDaoImpl(){
+    private UserMysqlDaoImpl() {
         sessionFactory = MysqlHibernateConnection.getSessionFactory();
         tripDao = TripMysqlDaoImpl.getInstance();
         transactionDao = TransactionMysqlDaoImpl.getInstance();
 
     }
 
-    public static UserDao getInstance(){
-        if(instance==null){
+    public static UserDao getInstance() {
+        if (instance == null) {
             instance = new UserMysqlDaoImpl();
         }
         return instance;
@@ -49,7 +49,7 @@ public class UserMysqlDaoImpl implements UserDao{
         session = sessionFactory.openSession();
         List<User> users = session.createQuery("Select a from User a ", User.class).getResultList();
         session.close();
-        for(User u : users){
+        for (User u : users) {
             u.setTrips(tripDao.findByUserId(u.getId()));
             u.setTransactions(transactionDao.findByUserId(u.getId()));
         }

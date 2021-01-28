@@ -8,14 +8,14 @@ public class MysqlHibernateConnection {
     private static MysqlHibernateConnection instance;
     private static SessionFactory sessionFactory;
 
-    private MysqlHibernateConnection(){
+    private MysqlHibernateConnection() {
     }
 
     public static SessionFactory getSessionFactory() {
-        if(instance==null){
+        if (instance == null) {
             instance = new MysqlHibernateConnection();
         }
-        if(sessionFactory == null){
+        if (sessionFactory == null) {
             sessionFactory = new Configuration().configure("hibernate.cfg.xml").buildSessionFactory();
         }
 

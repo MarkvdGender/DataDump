@@ -1,22 +1,15 @@
 package com.example.demo.domain;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
-import lombok.Getter;
-import lombok.Setter;
-//import lombok.Getter;
-//import lombok.Setter;
 
 import javax.persistence.*;
-
-//@Getter
-//@Setter
 
 @Entity
 @Table(name = "trip")
 public class Trip {
 
     @Id
-    @Column(name="event_id")
+    @Column(name = "event_id")
     @JsonProperty("EventId")
     private long eventId;
     @Column(name = "event_type")
@@ -182,8 +175,4 @@ public class Trip {
         this.maskedUserId = maskedUserId;
     }
 
-    ////    RELATIONAL MAPPING
-//    @ManyToOne
-//    @JoinColumn(name = "masked_user_id")
-//    private User user;
 }

@@ -11,23 +11,23 @@ public class UserService {
     private static UserService instance;
     private static UserDao dao;
 
-    private UserService(){
+    private UserService() {
         dao = UserMysqlDaoImpl.getInstance();
 
     }
 
-    public static UserService getInstance(){
-        if(instance==null){
+    public static UserService getInstance() {
+        if (instance == null) {
             instance = new UserService();
         }
         return instance;
     }
 
-    public void save(User u){
+    public void save(User u) {
         dao.save(u);
     }
 
-    public List<User> findAll(){
+    public List<User> findAll() {
         return dao.findAll();
     }
 

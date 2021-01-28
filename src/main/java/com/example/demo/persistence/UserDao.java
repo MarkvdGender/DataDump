@@ -6,7 +6,7 @@ import java.util.List;
 
 public interface UserDao {
 
-    void save (User u);
+    void save(User u);
 
     List<User> findAll();
 }

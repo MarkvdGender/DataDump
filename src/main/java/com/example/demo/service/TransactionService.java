@@ -11,19 +11,21 @@ public class TransactionService {
     private TransactionDao dao;
     private static UserService userService;
 
-    private TransactionService(){
+    private TransactionService() {
         dao = TransactionMysqlDaoImpl.getInstance();
         userService = UserService.getInstance();
-    };
+    }
 
-    public static TransactionService getInstance(){
-        if(instance==null){
-            instance= new TransactionService();
+    ;
+
+    public static TransactionService getInstance() {
+        if (instance == null) {
+            instance = new TransactionService();
         }
         return instance;
     }
 
-    public void save(Transaction t){
+    public void save(Transaction t) {
         User u = new User();
         u.setId(t.getMaskedUserId());
         userService.save(u);
